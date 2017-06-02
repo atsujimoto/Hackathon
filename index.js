@@ -9,7 +9,7 @@ var app = express();
 
 var mongoose = require('mongoose');
 var User = require('./models/user');
-mongoose.connect('mongodb://localhost/database');
+mongoose.connect('mongodb://localhost/ga-pro');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));

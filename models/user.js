@@ -11,7 +11,13 @@ var UserSchema = mongoose.Schema({
     password: {
         type: String,
         required: true
-    }
+    },
+    slack: String,
+    campus: String,
+    class: String,
+    undergrad: Boolean,
+    technologies: [String],
+    projects: [{ type: Schema.Types.ObjectId, ref: 'Project'}]
 });
 
 UserSchema.set('toJSON', {
