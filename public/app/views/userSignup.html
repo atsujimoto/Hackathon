@@ -1,6 +1,6 @@
 <!-- User Signup -->
 <div class="container">
-    <h3>Signup</h3>
+    <h3>Create An Account</h3>
     <form ng-submit="" class="col s12">
         <!-- Name -->
         <div class="row">
@@ -40,56 +40,97 @@
             <input type="text" class="validate" placeholder="List Preffered Technologies" ng-model="user.technologies">
         </div>
         <!-- Cohort -->
-        <h5>Which Cohort Were/Are You In</h5>
-        <form>
-            <div class="row">
-                <div class="input-field col s12">
-                    <select>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                        <option value="11">11</option>
-                        <option value="12">12</option>
-                        <option value="13">13</option>
-                    </select>
-                    <label>WDI</label>
-                </div>
-            </div>
-        </form>
-        <div class="row">
-            <div value="" lass="input-field col s12">
-                <select>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="8">8</option>
-                    <option value="9">9</option>
-                    <option value="10">10</option>
-                    <option value="11">11</option>
-                    <option value="12">12</option>
-                    <option value="13">13</option>
-                </select>
-                <label>UX</label>
-            </div>
-        </div>
-        <!-- Year -->
-        <div class="input-field col s12">
-            <!-- <label for="class">When did you graduate or when are you expected to graduate?</label> -->
-            <input type="text" class="date" placeholder="When did you graduate or when are you expected to graduate?">
-        </div>
-        <hr>
         <div>
+            <h5>Categories</h5>
+            <p>
+                <input type="checkbox" id="art" />
+                <label for="art">UX</label>
+            </p>
+            <p>
+                <input type="checkbox" id="art" />
+                <label for="art">Web Development</label>
+            </p>
+            <p>
+                <input type="checkbox" id="art" />
+                <label for="art">Data Science</label>
+            </p>
+            <p>
+                <input type="checkbox" id="art" />
+                <label for="art">Marketing</label>
+            </p>
+            <p>
+                <input type="checkbox" id="art" />
+                <label for="art">Visual</label>
+            </p>
+            <hr>
+        </div>
+        <!--     <select class="browser-default">
+            <option value="" disabled selected>WDI</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+        </select>
+        <select class="browser-default">
+            <option value="" disabled selected>UX</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+        </select>
+        <select class="browser-default">
+            <option value="" disabled selected>Data Science</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+        </select>
+        <select class="browser-default">
+            <option value="" disabled selected>Digital Marketing</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+        </select>
+        <div> -->
+        <h5>Are you a...?</h5>
+        <div class="row">
             <p>
                 <input name="group1" type="radio" id="test1" />
                 <label for="test1">Job Seeker</label>
@@ -103,9 +144,9 @@
                 <label for="test3">Both</label>
             </p>
         </div>
+        <hr>
         <div>
-            <hr>
-            <h3>Interested In?</h3>
+            <h5>Areas of Interest</h5>
             <p>
                 <input type="checkbox" id="art" />
                 <label for="art">Art/Music</label>
@@ -146,24 +187,9 @@
                 <input type="checkbox" id="Tutoring" />
                 <label for="Tutoring">Tutoring</label>
             </p>
-            <div class="">
-                <button type="submit" class="btn">Submit</button>
-            </div>
+        </div>
+        <div class="">
+            <button type="submit" class="btn">Submit</button>
         </div>
     </form>
-</div>
-<label>Browser Select</label>
-<select class="browser-default">
-    <option value="" disabled selected>Choose your option</option>
-    <option value="1">Option 1</option>
-    <option value="2">Option 2</option>
-    <option value="3">Option 3</option>
-</select>
-<select multiple>
-    <option value="" disabled selected>Choose your option</option>
-    <option value="1">Option 1</option>
-    <option value="2">Option 2</option>
-    <option value="3">Option 3</option>
-</select>
-<label>Materialize Multiple Select</label>
 </div>
