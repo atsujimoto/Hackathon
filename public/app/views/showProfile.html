@@ -5,21 +5,21 @@
         <h5>Name: {{ user.name }}</h5>
         <h6>Email: {{ user.email }}</h6>
         <h6>Slack: {{ user.slack }}</h6>
-        <p>Campus Location {{ user.campus }}</p>
-        <p>Undergrad {{ user.undergrad }}</p>
-        <p>Preferred Technologies: {{ user.technologies }}</p>
+        <span>Campus Location {{ user.campus }}</span>
+        <span>Undergrad {{ user.undergrad }}</span>
+        <span>Preferred Technologies: {{ user.technologies }}</span>
     </div>
     <!-- List All User's Projects -->
     <div class="section" ng-repeat="project in projects | filter:{userId:user._id} | filter:{name:search} track by project._id">
         <h5>My Projects: {{ project.title }}</h5>
-        <h6>Description: {{ project.description }}</h6>
-        <p>Github Link: {{ project.github }}</p>
-        <p>Deliverable Date: {{ project.deliverableDate }}</p>
-        <p>Technologies Requested: {{ project.technologies }}</p>
-        <p>Related Classes: {{ project.relatedClasses }}</p>
-        <p>Creator: {{ project.creator }}</p>
-        <p>Administrator(s): {{ project.admins }}</p>
-        <p>Collaborator(s): {{ project.collaborators}}</p>
+        <p>Description: {{ project.description }}</p>
+        <span>Github Link: {{ project.github }}</span>
+        <span>Deliverable Date: {{ project.deliverableDate }}</span>
+        <span>Technologies Requested: {{ project.technologies }}</span>
+        <span>Related Classes: {{ project.relatedClasses }}</span>
+        <span>Creator: {{ project.creator }}</span>
+        <span>Administrator(s): {{ project.admins }}</span>
+        <span>Collaborator(s): {{ project.collaborators}}</span>
     </div>
     <button type="button" ng-click="editBtn(true)" class="edit-btn">Edit Your Profile Information</button>
 </div>
@@ -70,14 +70,14 @@
         <!-- **UNURE IF WE WANT EDIT PROJECTS BUTTON FUNCTIONALITY ON THE USER PAGE -->
         <div class="section" ng-repeat="project in projects | filter:{userId:user._id} | filter:{name:search} track by project._id">
             <h5>My Projects: {{ project.title }}</h5>
-            <h6>Description: {{ project.description }}</h6>
-            <p>Github Link: {{ project.github }}</p>
-            <p>Deliverable Date: {{ project.deliverableDate }}</p>
-            <p>Technologies Requested: {{ project.technologies }}</p>
-            <p>Related Classes: {{ project.relatedClasses }}</p>
-            <p>Creator: {{ project.creator }}</p>
-            <p>Administrator(s): {{ project.admins }}</p>
-            <p>Collaborator(s): {{ project.collaborators}}</p>
+            <p>Description: {{ project.description }}</p>
+            <span>Github Link: {{ project.github }}</span>
+            <span>Deliverable Date: {{ project.deliverableDate }}</span>
+            <span>Technologies Requested: {{ project.technologies }}</span>
+            <span>Related Classes: {{ project.relatedClasses }}</span>
+            <span>Creator: {{ project.creator }}</span>
+            <span>Administrator(s): {{ project.admins }}</span>
+            <span>Collaborator(s): {{ project.collaborators}}</span>
             <!-- ~~~~~~~~~~~Link to Edit Project **UPDATE PATH~~~~~~~~~~~~ -->
             <div class="section">
                 <a class="btn waves-effect waves-light  cyan darken-4" ng-href="/projects/edit/{{project._id}}">Edit Project Details<i class="material-icons right">mode_edit</i></a>
