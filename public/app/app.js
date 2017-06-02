@@ -29,7 +29,7 @@ app.config([
             .state('login', {
                 url: '/login',
                 templateUrl: 'app/views/userLoginRegister.html',
-                controller: ''
+                controller: 'LoginCtrl'
             })
             // ------------PROFILE-------------------------------
             // Show Profile Page ADD CONTROLLER
@@ -69,6 +69,10 @@ app.config([
                 url: '/showProjects',
                 templateUrl: 'app/views/showProjects.html',
                 controller: ''
+            })
+            .state('newProject', {
+                url: '/newProject',
+                templateUrl: 'app/views/newProject.html'
             })
             // ------------ERROR-------------------------------
             // 404 Page
