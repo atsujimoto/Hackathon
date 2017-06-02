@@ -72,7 +72,8 @@ app.config([
             })
             .state('newProject', {
                 url: '/newProject',
-                templateUrl: 'app/views/newProject.html'
+                templateUrl: 'app/views/newProject.html',
+                controller: 'NewProjectCtrl'
             })
             // ------------ERROR-------------------------------
             // 404 Page

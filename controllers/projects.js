@@ -4,14 +4,23 @@ var router = express.Router();
 
 //Add a new project
 router.post('/', function(req, res) {
-    Project.findOne({ email: req.body.email }, function(err, project) {
-        if (project) return res.status(400).send({ message: 'Email already exists' });
+    var userId = req.user.id
+    res.send('test');
+    Project.create({
+        title: req.body.title,
+        description: req.body.description,
+        github: req.body.github,
+        startDate: req.body.startDate,
+        deliverableDate: req.body.deliverableDate,
+        compensation: req.body.compensation,
+        technologies: req.body.technologies,
+        keywords: req.body.keywords,
+        relatedClasses: req.body.relatedClasses,
+        creator: userId
+    }, function(err, project) {
+        if (err) return res.status(500).send(err);
 
-        Project.create(req.body, function(err, project) {
-            if (err) return res.status(500).send(err);
-
-            return res.send(project);
-        });
+        res.send(project);
     });
 });
 
@@ -20,7 +29,7 @@ router.post('/search', function(req, res) {
     Project.find(req.body, function(err, projects) {
         if (err) return res.status(500).send(err);
 
-        return res.send(projects);
+        res.send(projects);
     });
 });
 
@@ -30,7 +39,7 @@ router.route('/:id')
         Project.findById(req.params.id, function(err, project) {
             if (err) return res.status(500).send(err);
 
-            return res.send(project);
+            res.send(project);
         });
     })
     //Edit a project
@@ -38,7 +47,7 @@ router.route('/:id')
         Project.findByIdAndUpdate(req.params.id, req.body, { new: true}, function(err, result) {
             if (err) return res.status(500).send(err);
 
-            return res.send(result);
+            res.send(result);
         });
     })
     //Delete a project
