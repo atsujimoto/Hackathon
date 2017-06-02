@@ -15,7 +15,7 @@ app.config([
         // -----------------HOME PAGE-------------------------
             .state('home', {
                 url: '/',
-                templateUrl: 'app/views/home.html'
+                templateUrl: 'app/views/dashboard.html'
             })
             // ------------USER-------------------------------
             // ADD CONTROLLER
