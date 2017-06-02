@@ -1,8 +1,8 @@
-
 /*---------Global---------*/
 
 body {
     font-family: "Georgia", Georgia, serif;
+    background-color: #F6F6F6;
 }
 
 h3 {
@@ -23,6 +23,49 @@ p {
 
 /*---------Home Page---------*/
 
+nav {
+    background-color: #222222;
+}
+
+button.btn {
+    background-color: #ff5f5f;
+    border-bottom: #A20101;
+    margin: .5em;
+    font-size: 18px;
+}
+
+button.btn:hover {
+    background-color: #FA4542;
+}
+
+button.btn:active {
+    background-color: white;
+}
+
+.main-pg-pic {
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+}
+
+.mid-section-home {
+    text-align: center;
+    margin: 10em 2em;
+}
+
+.bottom-section-home {
+    text-align: center;
+    margin: 10em 0;
+}
+
+footer {
+    background-color: #222222;
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    padding: 5em 2em;
+}
+
 
 /*---------Login/Register---------*/
 
@@ -34,42 +77,45 @@ p {
 
 
 /*---------Projects---------*/
-=======
+
 .flex {
-	display: flex;
+    display: flex;
 }
 
 .column {
-	flex-direction: column;
-	align-items: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 .side-box {
-		border: 2px solid black;
-		height: 33vw;
-		margin: 1em;
-		padding: .5em;
+    border: 2px solid black;
+    height: 33vw;
+    margin: 1em;
+    padding: .5em;
+    background-color: white;
 }
 
 .candidate-box {
-		width: 60%;
-		border: 2px solid black;
-		margin: 2em;
-		padding: 1em;
+    width: 60%;
+    border: 2px solid black;
+    margin: 2em;
+    padding: 1em;
+    background-color: #E4F1FE;
 }
 
 .candidate-box img {
-		max-width: 200px;
-		max-height: 200px;
+    max-width: 200px;
+    max-height: 200px;
 }
 
 .project-box {
-		width: 60%;
-		border: 2px solid black;
-		margin: 2em;
-		padding: 1em;
+    width: 60%;
+    border: 2px solid black;
+    margin: 2em;
+    padding: 1em;
+    background-color: #E4F1FE;
 }
 
 .project-box div {
-	width: 75%;
+    width: 75%;
 }

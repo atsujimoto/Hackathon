@@ -5,62 +5,68 @@
         <!-- Name -->
         <div class="row">
             <div class="input-field col s12">
-                <input type="text" class="validate" id="name" placeholder="name" ng-model="user.name">
-                <!-- <label for="name">Name</label> -->
+                <label for="name">Name</label>
+                <input type="text" class="validate" id="name" ng-model="user.name">
             </div>
         </div>
         <!-- Email -->
         <div class="input-field col s12">
-            <!-- <label for="email">Email</label> -->
-            <input type="text" class="validate" placeholder="Email" ng-model="user.email">
+            <label for="email">Email</label>
+            <input type="text" class="validate" ng-model="user.email">
         </div>
         <!--Slack Account-->
         <div class="input-field col s12">
-            <!-- <label for="slack">Slack</label> -->
-            <input type="text" class="validate" placeholder="Slack" ng-model="user.slack">
+            <label for="slack">Slack</label>
+            <input type="text" class="validate" ng-model="user.slack">
         </div>
         <!--Campus-->
         <div class="input-field col s12">
-            <!-- <label for="campus">Campus Location</label> -->
-            <input type="text" class="validate" placeholder="Campus" ng-model="user.campus">
+            <label for="campus">Campus Location</label>
+            <input type="text" class="validate" ng-model="user.campus">
         </div>
         <!-- Class-->
         <div class="input-field col s12">
-            <!-- <label for="class">Class</label> -->
-            <input type="text" class="validate" placeholder="Class" ng-model="user.class">
+            <label for="class">Class</label>
+            <input type="text" class="validate" ng-model="user.class">
+        </div>
+        <!-- Technologies-->
+        <div class="input-field col s12">
+            <label for="technologies">Technologies</label>
+            <input type="text" class="validate" ng-model="user.technologies">
         </div>
         <!--Undergrad -->
-        <div class="input-field col s12">
-            <!-- <label for="undergrad">Undergraduate</label> -->
-            <input type="checkbox" class="validate" placeholder="" ng-model="user.undergrad">
-        </div>
-        <!-- Technologies -->
-        <div class="input-field col s12">
-            <!-- <label for="class">Preferred Technologies</label> -->
-            <input type="text" class="validate" placeholder="List Preffered Technologies" ng-model="user.technologies">
+        <div class="input-field row">
+            <p class="col s6 l6">
+                <input type="checkbox" id="undergrad-no" />
+                <label for="undergrad-no">Graduate</label>
+            </p>
+            <p class="col s6 l6">
+                <input type="checkbox" id="undergrad-yes" />
+                <label for="undergrad-yes">Undergraduate</label>
+            </p>
         </div>
         <!-- Cohort -->
         <div>
             <h5>Categories</h5>
             <p>
-                <input type="checkbox" id="art" />
-                <label for="art">UX</label>
+                <input type="checkbox" id="UX" />
+                <label for="UX">UX</label>
             </p>
             <p>
-                <input type="checkbox" id="art" />
-                <label for="art">Web Development</label>
+                <input type="checkbox" id="Development" />
+                <label for="Development">Web Development</label>
             </p>
             <p>
-                <input type="checkbox" id="art" />
-                <label for="art">Data Science</label>
+                <input type="checkbox" id="Science" />
+                <label for="Science">Data Science</label>
             </p>
             <p>
-                <input type="checkbox" id="art" />
-                <label for="art">Marketing</label>
+                <input type="checkbox" id="Marketing" />
+                <label for="Marketing">Marketing</label>
             </p>
             <p>
-                <input type="checkbox" id="art" />
-                <label for="art">Visual</label>
+                <input type="checkbox" id="Visual" />
+                <label for="Visual">Visual</label>
             </p>
             <hr>
         </div>
@@ -146,7 +152,7 @@
         </div>
         <hr>
         <div>
-            <h5>Areas of Interest</h5>
+            <h5>Interests</h>
             <p>
                 <input type="checkbox" id="art" />
                 <label for="art">Art/Music</label>
@@ -189,7 +195,7 @@
             </p>
         </div>
         <div class="">
-            <button type="submit" class="btn">Submit</button>
+            <button type="submit" class="btn btn-theme">Submit</button>
         </div>
     </form>
 </div>

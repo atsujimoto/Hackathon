@@ -15,6 +15,13 @@ app.config([
         // -----------------HOME PAGE-------------------------
             .state('home', {
                 url: '/',
+                templateUrl: 'app/views/home.html',
+                // controller: 'DashCtrl'
+            })
+            // -----------------Dashboard-------------------------
+
+        .state('dashboard', {
+                url: '/dashboard',
                 templateUrl: 'app/views/dashboard.html',
                 controller: 'DashCtrl'
             })
