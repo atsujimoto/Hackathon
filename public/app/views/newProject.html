@@ -1,84 +1,149 @@
 <div class="row">
-    <form class="col s12">
+    <form class="col s12" ng-submit="createProject()">
       <div class="row">
-        	<div class="input-field col s12">
-          		<input name="title" type="text">
+        	<div class="input-field col s6">
+          		<input name="title" type="text" ng-model="project.title" required>
           		<label for="title">Project Name</label>
+          </div>
+          <div class="input-field col s6">
+          		<input name="github" type="text" ng-model="project.github" required>
+          		<label for="github">Github Link</label>
           </div>
       </div>
       <div class="row">
 		      <div class="col s4">
 		      		<label for="start-date">Start Date</label>
-							<input type="date" name="start-date">
+							<input type="date" name="start-date" ng-model="project.startDate" required>
 		      </div>
 		      <div class="col s4">
 		      		<label for="end-date">Deliverable Date</label>
-							<input type="date" name="end-date">
+							<input type="date" name="end-date" ng-model="project.deliverableDate" required>
 		      </div>
 		      <div class="input-field col s4">
-							<input type="number" name="payment">
+							<input type="number" name="payment" ng-model="project.compensation" required>
 							<label for="payment">Compensation</label>
 		      </div>
       </div>
       <div class="row">
 					<div class="input-field col s12">
-							<textarea name="description" cols="30" rows="10"></textarea>
+							<textarea name="description" cols="30" rows="10" ng-model="project.description" required></textarea>
 							<label for="description">Description</label>
 					</div>
       </div>
-      <div class="checkboxes flex">
-		      <div class="row">
-		      		<div class="input-field col s12 flex column">
-									<p>
-											<input type="checkbox" name="art-music">
-											<label for="art-music">Art/Music</label>
-									</p>
-									<p>
-											<input type="checkbox" name="education">
-											<label for="education">Education</label>
-									</p>
-									<p>
-											<input type="checkbox" name="retail">
-											<label for="retail">Retail</label>
-									</p>
-									<p>
-											<input type="checkbox" name="tutoring">
-											<label for="tutoring">Tutoring</label>
-									</p>
-							</div>
-					</div>
-		      <div class="row">
-							<div class="input-field col s12 flex column">
-									<p>
-											<input type="checkbox" name="health">
-											<label for="health">Health</label>
-									</p>
-									<p>
-											<input type="checkbox" name="tech">
-											<label for="tech">Tech</label>
-									</p>
-									<p>
-											<input type="checkbox" name="services">
-											<label for="services">Services</label>
-									</p>
-							</div>
-					</div>
-		      <div class="row">
-							<div class="input-field col s12 flex column">
-									<p>
-											<input type="checkbox" name="food">
-											<label for="food">Food</label>
-									</p>
-									<p>
-											<input type="checkbox" name="community">
-											<label for="community">Community</label>
-									</p>
-									<p>
-											<input type="checkbox" name="business">
-											<label for="business">Business</label>
-									</p>
-							</div>
+      <div class="row">
+					<div class="input-field col s12">
+							<textarea name="technologies" cols="30" rows="10" placeholder="separate by commas" ng-model="project.technologies"></textarea>
+							<label for="technologies">Technology Used</label>
 					</div>
       </div>
+      <div class="flex">
+		      <div class="checkboxes">
+		      		<h4 class="center-align">Tags</h4>
+		      		<div class="flex">
+						      <div class="row">
+						      		<div class="input-field col s12 flex column">
+													<p>
+															<input type="checkbox" id="project-art-music" ng-model="project.keywords.artMusic">
+															<label for="project-art-music">Art/Music</label>
+													</p>
+													<p>
+															<input type="checkbox" id="project-education" ng-model="project.keywords.education">
+															<label for="project-education">Education</label>
+													</p>
+													<p>
+															<input type="checkbox" id="project-retail" ng-model="project.keywords.retail">
+															<label for="project-retail">Retail</label>
+													</p>
+													<p>
+															<input type="checkbox" id="project-tutoring" ng-model="project.keywords.tutoring">
+															<label for="project-tutoring">Tutoring</label>
+													</p>
+											</div>
+									</div>
+						      <div class="row">
+											<div class="input-field col s12 flex column">
+													<p>
+															<input type="checkbox" id="project-health" ng-model="project.keywords.health">
+															<label for="project-health">Health</label>
+													</p>
+													<p>
+															<input type="checkbox" id="project-tech" ng-model="project.keywords.tech">
+															<label for="project-tech">Tech</label>
+													</p>
+													<p>
+															<input type="checkbox" id="project-services" ng-model="project.keywords.services">
+															<label for="project-services">Services</label>
+													</p>
+											</div>
+									</div>
+						      <div class="row">
+											<div class="input-field col s12 flex column">
+													<p>
+															<input type="checkbox" id="project-food" ng-model="project.keywords.food">
+															<label for="project-food">Food</label>
+													</p>
+													<p>
+															<input type="checkbox" id="project-community" ng-model="project.keywords.community">
+															<label for="project-community">Community</label>
+													</p>
+													<p>
+															<input type="checkbox" id="project-business" ng-model="project.keywords.business">
+															<label for="project-business">Business</label>
+													</p>
+											</div>
+									</div>
+							</div>
+		      </div>
+		      <div class="checkboxes">
+		      		<h4 class="center-align">Applicable GA Courses</h4>
+		      		<div class="flex">
+				      		<div class="row">
+				      				<div class="input-field col s12 flex column">
+				      						<p>
+				      								<input type="checkbox" id="project-wdi" ng-model="project.relatedClasses.wdi">
+				      								<label for="project-wdi">WDI</label>
+				      						</p>
+				      						<p>
+				      								<input type="checkbox" id="project-uxdi" ng-model="project.relatedClasses.uxdi">
+				      								<label for="project-uxdi">UXDI</label>
+				      						</p>
+				      						<p>
+				      								<input type="checkbox" id="project-dsi" ng-model="project.relatedClasses.dsi">
+				      								<label for="project-dsi">DSI</label>
+				      						</p>
+				      				</div>
+				      		</div>
+				      		<div class="row">
+				      				<div class="input-field col s12 flex column">
+				      						<p>
+				      								<input type="checkbox" id="project-dm" ng-model="project.relatedClasses.dm">
+				      								<label for="project-dm">DM</label>
+				      						</p>
+				      						<p>
+				      								<input type="checkbox" id="project-an" ng-model="project.relatedClasses.an">
+				      								<label for="project-an">AN</label>
+				      						</p>
+				      						<p>
+				      								<input type="checkbox" id="project-uxd" ng-model="project.relatedClasses.uxd">
+				      								<label for="project-uxd">UXD</label>
+				      						</p>
+				      				</div>
+				      		</div>
+				      		<div class="row">
+				      				<div class="input-field col s12 flex column">
+				      						<p>
+				      								<input type="checkbox" id="project-pm" ng-model="project.relatedClasses.pm">
+				      								<label for="project-pm">PM</label>
+				      						</p>
+				      						<p>
+				      								<input type="checkbox" id="project-fewd" ng-model="project.relatedClasses.fewd">
+				      								<label for="project-fewd">FEWD</label>
+				      						</p>
+				      				</div>
+				      		</div>
+		      		</div>
+		      </div>
+      </div>
+  		<button type="submit">Create New Project</button>
     </form>
  </div>
