@@ -17,10 +17,29 @@
                 <label for="password">Password</label>
             </div>
         </div>
-        <button class="btn waves-effect waves-light" type="submit" name="action">Login</button>
+        <div>
+            <button class="btn waves-effect waves-light" type="submit" name="action">Login</button>
+        </div>
     </form>
 </div>
 <hr>
+<!-- GA Authentication -->
+<h3>Are you a currently Enrolled GA Student?</h3>
+<form action="#">
+    <p>
+        <input type="checkbox" id="test5" />
+        <label for="test5">Yes/No</label>
+    </p>
+    <h5>If you are a currently enrolled GA Student Please Enter your Authentication Code</h5>
+    <span>This was received in your email</span>
+    <div class="input-field col s6">
+        <label for="name">Authentication Code</label>
+        <input type="text" class="validate" placeholder="Name" ng-model="user.name">
+    </div>
+    <div>
+        <button class="btn waves-effect waves-light" type="submit" name="action">Signup</button>
+    </div>
+</form>
 <!-- User Signup -->
 <form ng-submit="" class="">
     <h3>Signup</h3>
@@ -60,6 +79,7 @@
         <input type="text" class="validate" placeholder="List Preffered Technologies" ng-model="user.technologies">
     </div>
     <!-- Cohort -->
+    <h5>Which Cohort Were/Are You In</h5>
     <div class="input-field col s12">
         <select>
             <option value="1">1</option>
@@ -76,149 +96,108 @@
             <option value="12">12</option>
             <option value="13">13</option>
         </select>
-        <label>Which Cohort Were/Are You In?</label>
+        <label>WDI</label>
+    </div>
+    <div class="input-field col s12">
+        <select>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+        </select>
+        <label>UX</label>
     </div>
     <!-- Year -->
     <div class="input-field col s12">
-        <label for="class">Which Year Did you Graduate or When are You Planning to Graduate?</label>
+        <label for="class">When did you graduate or when are you expected to graduate?</label>
         <input type="date" class="datepicker">
     </div>
-    <form action="#">
+    <div>
         <p>
-            <input type="checkbox" id="test5" />
-            <label for="test5">Seeker</label>
+            <input name="seeker" type="radio" id="seeker" />
+            <label for="test1">Job Seeker</label>
         </p>
         <p>
-            <input type="checkbox" id="test5" />
-            <label for="test5">Poster</label>
+            <input name="poster" type="radio" id="poster" />
+            <label for="test1">Job Poster</label>
         </p>
         <p>
-            <input type="checkbox" id="test5" />
-            <label for="test5">Both</label>
+            <input name="both" type="radio" id="both" />
+            <label for="test1">Both</label>
         </p>
-    </form>
+    </div>
     <div>
         <label>Interested In?</label>
         <div class="switch">
             <label>
                 <input type="checkbox">
-                <span class="lever"></span> Cats
+                <span class="lever"></span> Art/Music
             </label>
         </div>
         <div class="switch">
             <label>
                 <input type="checkbox">
-                <span class="lever"></span> Furry Things
+                <span class="lever"></span> Education
             </label>
         </div>
         <div class="switch">
             <label>
                 <input type="checkbox">
-                <span class="lever"></span> Javascript
+                <span class="lever"></span> Retail
             </label>
         </div>
         <div class="switch">
             <label>
                 <input type="checkbox">
-                <span class="lever"></span> MEAN Stack
+                <span class="lever"></span> Health
             </label>
             <div class="switch">
                 <label>
                     <input type="checkbox">
-                    <span class="lever"></span> UX Cool Stuff
+                    <span class="lever"></span> Tech
                 </label>
             </div>
             <div class="switch">
                 <label>
                     <input type="checkbox">
-                    <span class="lever"></span> Cats
+                    <span class="lever"></span> Services
                 </label>
             </div>
             <div class="switch">
                 <label>
                     <input type="checkbox">
-                    <span class="lever"></span> Furry Things
+                    <span class="lever"></span> Food
                 </label>
             </div>
             <div class="switch">
                 <label>
                     <input type="checkbox">
-                    <span class="lever"></span> Javascript
+                    <span class="lever"></span> Community
                 </label>
             </div>
             <div class="switch">
                 <label>
                     <input type="checkbox">
-                    <span class="lever"></span> MEAN Stack
+                    <span class="lever"></span> Business
                 </label>
             </div>
             <div class="switch">
                 <label>
                     <input type="checkbox">
-                    <span class="lever"></span> UX Cool Stuff
+                    <span class="lever"></span> Tutoring
                 </label>
             </div>
-            <div class="switch">
-                <label>
-                    <input type="checkbox">
-                    <span class="lever"></span> Cats
-                </label>
+            <div class="">
+                <button type="submit" class="btn">Submit</button>
             </div>
-            <div class="switch">
-                <label>
-                    <input type="checkbox">
-                    <span class="lever"></span> Furry Things
-                </label>
-            </div>
-            <div class="switch">
-                <label>
-                    <input type="checkbox">
-                    <span class="lever"></span> Javascript
-                </label>
-            </div>
-            <div class="switch">
-                <label>
-                    <input type="checkbox">
-                    <span class="lever"></span> MEAN Stack
-                </label>
-                <div class="switch">
-                    <label>
-                        <input type="checkbox">
-                        <span class="lever"></span> UX Cool Stuff
-                    </label>
-                </div>
-                <div class="switch">
-                    <label>
-                        <input type="checkbox">
-                        <span class="lever"></span> Cats
-                    </label>
-                </div>
-                <div class="switch">
-                    <label>
-                        <input type="checkbox">
-                        <span class="lever"></span> Furry Things
-                    </label>
-                </div>
-                <div class="switch">
-                    <label>
-                        <input type="checkbox">
-                        <span class="lever"></span> Javascript
-                    </label>
-                </div>
-                <div class="switch">
-                    <label>
-                        <input type="checkbox">
-                        <span class="lever"></span> MEAN Stack
-                    </label>
-                </div>
-                <div class="switch">
-                    <label>
-                        <input type="checkbox">
-                        <span class="lever"></span> UX Cool Stuff
-                    </label>
-                </div>
-                <div class="">
-                    <button type="submit" class="btn">Submit</button>
-                </div>
-            </div>
+        </div>
 </form>

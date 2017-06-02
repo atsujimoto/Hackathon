@@ -10,8 +10,12 @@
 <!-- *UPDATE NAVCTRL -->
 <nav>
     <div class="nav-wrapper" ng-controller="NavCtrl">
-        <a href="#" id="" class="brand-logo"><i class="fa fa-thumb-tack" aria-hidden="true"></i>GAPRO</a>
+        <a href="/" id="" class="brand-logo"><i class="fa fa-thumb-tack" aria-hidden="true"></i>GAPRO</a>
         <a href="#" class="button-collapse" data-activates="mobile-demo"><i class="material-icons">menu</i></a>
+        <div class="input-field col s3">
+            <input type="text" class="grey" id="search" ng-model="search">
+            <label for="search">Global Search</label>
+        </div>
         <ul class="navlinks right hide-on-med-and-down">
             <li><a href="/">Home</a></li>
             <li><a href="/login" ng-hide="isLoggedIn()">Login</a></li>
