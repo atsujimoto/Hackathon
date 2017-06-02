@@ -1,0 +1,47 @@
+<!-- User Login -->
+<!-- **UPDATE NG-SUBMIT PATH IF NEED BE -->
+<div class="container">
+    <div class="row">
+        <div class="col s6 l6">
+            <form ng-submit="userLogin()">
+                <h3>Login</h3>
+                <!-- Email -->
+                <div class="row">
+                    <div class="input-field">
+                        <input type="email" class="validate" id="email" ng-model="user.email" required>
+                        <label for="email" class="active" data-error="invalid email address" data-success="OK">Email</label>
+                    </div>
+                </div>
+                <!-- Password -->
+                <div class="row">
+                    <div class="input-field">
+                        <input type="password" class="validate" id="password" ng-model="user.password" required>
+                        <label for="password" class="active">Password</label>
+                    </div>
+                </div>
+                <div>
+                    <button class="btn waves-effect waves-light" type="submit" name="action">Login</button>
+                </div>
+            </form>
+        </div>
+        <!-- GA Authentication -->
+        <div class="col s6 l6">
+            <h3>Are you a currently Enrolled GA Student?</h3>
+            <form action="#">
+                <p>
+                    <input type="checkbox" id="test5" />
+                    <label for="test5">Yes/No</label>
+                </p>
+                <h5>If you are a currently enrolled GA Student Please Enter your Authentication Code</h5>
+                <span>This was received in your email</span>
+                <div class="input-field col s6">
+                    <label for="name">Authentication Code</label>
+                    <input type="text" class="validate" placeholder="Name" ng-model="user.name">
+                </div>
+                <div>
+                    <a href="/signup" class="btn waves-effect waves-light" type="submit">Submit</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
