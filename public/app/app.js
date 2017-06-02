@@ -17,17 +17,17 @@ app.config([
                 url: '/',
                 templateUrl: 'app/views/home.html'
             })
-            // ------------USER-------------------------------
+            // ------------USER Login/Signup-------------------------------
             // ADD CONTROLLER
-            .state('signup', {
-                url: '/signup',
-                templateUrl: 'app/views/userSignup.html',
-                controller: ''
-            })
+            // .state('signup', {
+            //     url: '/signup',
+            //     templateUrl: 'app/views/userSignup.html',
+            //     controller: ''
+            // })
             // ADD CONTROLLER
             .state('login', {
                 url: '/login',
-                templateUrl: 'app/views/userLogin.html',
+                templateUrl: 'app/views/userLoginSignup.html',
                 controller: ''
             })
             // ------------PROFILE-------------------------------
