@@ -1,3 +1,4 @@
+
 /*---------Global---------*/
 
 body {
@@ -33,3 +34,42 @@ p {
 
 
 /*---------Projects---------*/
+=======
+.flex {
+	display: flex;
+}
+
+.column {
+	flex-direction: column;
+	align-items: center;
+}
+
+.side-box {
+		border: 2px solid black;
+		height: 33vw;
+		margin: 1em;
+		padding: .5em;
+}
+
+.candidate-box {
+		width: 60%;
+		border: 2px solid black;
+		margin: 2em;
+		padding: 1em;
+}
+
+.candidate-box img {
+		max-width: 200px;
+		max-height: 200px;
+}
+
+.project-box {
+		width: 60%;
+		border: 2px solid black;
+		margin: 2em;
+		padding: 1em;
+}
+
+.project-box div {
+	width: 75%;
+}

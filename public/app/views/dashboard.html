@@ -6,8 +6,8 @@
 				<h1>Dashboard</h1>
 		</div>
 		<div class="col s2">
-				<button class="btn">View Users</button>
-				<button class="btn">View Projects</button>
+				<button type="button" class="btn" ng-click="toggle(false)">Users</button>
+				<button type="button" class="btn" ng-click="toggle(true)">Projects</button>
 		</div>
 </div>
 <div class="row">
@@ -18,3 +18,145 @@
 		</div>
 		<div class="col s2"></div>
 </div>
+<div id="created-projects" ng-if="!bool">
+		<div class="row">
+				<div class="col s10 flex column">
+						<h3 class="center-align">Potential Candidates</h3>
+						<h5 class="center-align">Project Name</h5>
+						<div class="candidate-box flex">
+								<div>
+										<img src="../img/placeholder-profile.png" alt="Candidate Name" class="responsive-img">
+										<h3>Candidate Name</h3>
+								</div>
+								<ul>
+										<li>Matched Key</li>
+										<li>Matched Key</li>
+										<li>Matched Key</li>
+										<li>Matched Key</li>
+								</ul>
+						</div>
+						<div class="candidate-box flex">
+								<div>
+										<img src="../img/placeholder-profile.png" alt="Candidate Name" class="responsive-img">
+										<h3>Candidate Name</h3>
+								</div>
+								<ul>
+										<li>Matched Key</li>
+										<li>Matched Key</li>
+										<li>Matched Key</li>
+										<li>Matched Key</li>
+								</ul>
+						</div>
+						<div class="candidate-box flex">
+								<div>
+										<img src="../img/placeholder-profile.png" alt="Candidate Name" class="responsive-img">
+										<h3>Candidate Name</h3>
+								</div>
+								<ul>
+										<li>Matched Key</li>
+										<li>Matched Key</li>
+										<li>Matched Key</li>
+										<li>Matched Key</li>
+								</ul>
+						</div>
+				</div>
+				<div class="col s2">
+						<div>
+								<div class="side-box">
+										<h6 class="center-align">Your Open Projects</h6>
+										<ul>
+											<li>Project</li>
+											<li>Project</li>
+											<li>Project</li>
+											<li>Project</li>
+										</ul>
+								</div>
+								<div class="side-box">
+								<h6 class="center-align">Your Completed Projects</h6>
+										<ul>
+											<li>Project</li>
+											<li>Project</li>
+											<li>Project</li>
+											<li>Project</li>
+											<li>Project</li>
+											<li>Project</li>
+											<li>Project</li>
+											<li>Project</li>
+											<li>Project</li>
+										</ul>
+								</div>
+						</div>
+				</div>
+		</div>
+</div>
+<div id="potential-projects" ng-if="bool">
+		<div class="row">
+				<div class="col s10 flex column">
+						<h3 class="center-align">Potential Projects</h3>
+						<div class="project-box flex">
+								<div>
+										<h3>Project Name</h3>
+										<p>Project description, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores et impedit dolores explicabo quod laborum veritatis aut nostrum itaque unde. Dolore nisi obcaecati nostrum vel qui nihil, quod possimus expedita?</p>
+								</div>
+								<ul>
+										<li>Matched Key</li>
+										<li>Matched Key</li>
+										<li>Matched Key</li>
+										<li>Matched Key</li>
+								</ul>
+						</div>
+						<div class="project-box flex">
+								<div>
+										<h3>Project Name</h3>
+										<p>Project description, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores et impedit dolores explicabo quod laborum veritatis aut nostrum itaque unde. Dolore nisi obcaecati nostrum vel qui nihil, quod possimus expedita?</p>
+								</div>
+								<ul>
+										<li>Matched Key</li>
+										<li>Matched Key</li>
+										<li>Matched Key</li>
+										<li>Matched Key</li>
+								</ul>
+						</div>
+						<div class="project-box flex">
+								<div>
+										<h3>Project Name</h3>
+										<p>Project description, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores et impedit dolores explicabo quod laborum veritatis aut nostrum itaque unde. Dolore nisi obcaecati nostrum vel qui nihil, quod possimus expedita?</p>
+								</div>
+								<ul>
+										<li>Matched Key</li>
+										<li>Matched Key</li>
+										<li>Matched Key</li>
+										<li>Matched Key</li>
+								</ul>
+						</div>
+				</div>
+				<div class="col s2">
+						<div>
+								<div class="side-box">
+										<h6 class="center-align">Your Open Projects</h6>
+										<ul>
+											<li>Project</li>
+											<li>Project</li>
+											<li>Project</li>
+											<li>Project</li>
+										</ul>
+								</div>
+								<div class="side-box">
+								<h6 class="center-align">Your Completed Projects</h6>
+										<ul>
+											<li>Project</li>
+											<li>Project</li>
+											<li>Project</li>
+											<li>Project</li>
+											<li>Project</li>
+											<li>Project</li>
+											<li>Project</li>
+											<li>Project</li>
+											<li>Project</li>
+										</ul>
+								</div>
+						</div>
+				</div>
+		</div>
+</div>
+

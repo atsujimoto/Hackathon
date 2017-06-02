@@ -46,4 +46,9 @@ angular.module('MainCtrls', ['MainServices'])
     }])
     .controller('AlertCtrl', ['$scope', 'Alerts', function($scope, Alerts) {
         $scope.Alerts = Alerts;
+    }])
+    .controller('DashCtrl', ['$scope', function($scope) {
+        $scope.toggle = function(bool) {
+            $scope.bool = bool;
+        }
     }]);
