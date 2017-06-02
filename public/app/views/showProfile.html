@@ -1,0 +1,87 @@
+<!-- Show and Edit User Profile Page -->
+<!-- SHOW PROFILE TOGGLE-->
+<div ng-if="!bool">
+    <div class="section center">
+        <h5>Name: {{ user.name }}</h5>
+        <h6>Email: {{ user.email }}</h6>
+        <h6>Slack: {{ user.slack }}</h6>
+        <span>Campus Location {{ user.campus }}</span>
+        <span>Undergrad {{ user.undergrad }}</span>
+        <span>Preferred Technologies: {{ user.technologies }}</span>
+    </div>
+    <!-- List All User's Projects -->
+    <div class="section" ng-repeat="project in projects | filter:{userId:user._id} | filter:{name:search} track by project._id">
+        <h5>My Projects: {{ project.title }}</h5>
+        <p>Description: {{ project.description }}</p>
+        <span>Github Link: {{ project.github }}</span>
+        <span>Deliverable Date: {{ project.deliverableDate }}</span>
+        <span>Technologies Requested: {{ project.technologies }}</span>
+        <span>Related Classes: {{ project.relatedClasses }}</span>
+        <span>Creator: {{ project.creator }}</span>
+        <span>Administrator(s): {{ project.admins }}</span>
+        <span>Collaborator(s): {{ project.collaborators}}</span>
+    </div>
+    <button type="button" ng-click="editBtn(true)" class="edit-btn">Edit Your Profile Information</button>
+</div>
+<!-- EDIT PROFILE TOGGLE-->
+<div ng-if="bool">
+    <!-- *add edit user function -->
+    <form ng-submit="" class="">
+        <h4>Edit Your Profile</h4>
+        <!-- Name -->
+        <div class="edit-form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" placeholder="{{ user.name }}" ng-model="user.name">
+        </div>
+        <!-- Email -->
+        <div class="edit-form-group">
+            <label for="email">Email</label>
+            <input type="text" class="form-control" placeholder="{{ user.email }}" ng-model="user.email">
+        </div>
+        <!--Slack Account-->
+        <div class="edit-form-group">
+            <label for="slack">Slack</label>
+            <input type="text" class="form-control" placeholder="{{ user.slack }}" ng-model="user.slack">
+        </div>
+        <!--Campus-->
+        <div class="edit-form-group">
+            <label for="campus">Campus Location</label>
+            <input type="text" class="form-control" placeholder="{{ user.campus }}" ng-model="user.campus">
+        </div>
+        <!-- Class-->
+        <div class="edit-form-group">
+            <label for="class">Class</label>
+            <input type="text" class="form-control" placeholder="{{ user.class }}" ng-model="user.class">
+        </div>
+        <!--Undergrad -->
+        <div class="edit-form-group">
+            <label for="undergrad">Undergraduate</label>
+            <input type="text" class="form-control" placeholder="{{ user.undergrad }}" ng-model="user.undergrad">
+        </div>
+        <!-- Technologies -->
+        <div class="edit-form-group">
+            <label for="class">Preferred Technologies</label>
+            <input type="text" class="form-control" placeholder="{{ user.technologies }}" ng-model="user.technologies">
+        </div>
+        <div class="save-edit-btns">
+            <button type="button" class="save-btns" ng-click="editBtn(false)" class="cancel-btn">Cancel</button>
+            <button type="submit" class="save-btns">Submit</button>
+        </div>
+        <!-- **UNURE IF WE WANT EDIT PROJECTS BUTTON FUNCTIONALITY ON THE USER PAGE -->
+        <div class="section" ng-repeat="project in projects | filter:{userId:user._id} | filter:{name:search} track by project._id">
+            <h5>My Projects: {{ project.title }}</h5>
+            <p>Description: {{ project.description }}</p>
+            <span>Github Link: {{ project.github }}</span>
+            <span>Deliverable Date: {{ project.deliverableDate }}</span>
+            <span>Technologies Requested: {{ project.technologies }}</span>
+            <span>Related Classes: {{ project.relatedClasses }}</span>
+            <span>Creator: {{ project.creator }}</span>
+            <span>Administrator(s): {{ project.admins }}</span>
+            <span>Collaborator(s): {{ project.collaborators}}</span>
+            <!-- ~~~~~~~~~~~Link to Edit Project **UPDATE PATH~~~~~~~~~~~~ -->
+            <div class="section">
+                <a class="btn waves-effect waves-light  cyan darken-4" ng-href="/projects/edit/{{project._id}}">Edit Project Details<i class="material-icons right">mode_edit</i></a>
+            </div>
+        </div>
+    </form>
+</div>
