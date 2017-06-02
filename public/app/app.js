@@ -1,5 +1,5 @@
 // Enter name of App and name of Ctrls!!!!!!
-var app = angular.module('GAPro', ['ui.router', '']);
+var app = angular.module('MyApp', ['ui.router', 'MainCtrls']);
 
 app.config([
     '$stateProvider',
