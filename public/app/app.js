@@ -12,7 +12,6 @@ app.config([
 
         $stateProvider
 
-
         // -----------------HOME PAGE-------------------------
             .state('home', {
                 url: '/',
