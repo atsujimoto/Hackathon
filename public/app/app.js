@@ -1,5 +1,5 @@
 // Enter name of App and name of Ctrls!!!!!!
-var app = angular.module('', ['ui.router', '']);
+var app = angular.module('MyApp', ['ui.router', 'MainCtrls']);
 
 app.config([
     '$stateProvider',
@@ -15,7 +15,7 @@ app.config([
         // -----------------HOME PAGE-------------------------
             .state('home', {
                 url: '/',
-                templateUrl: 'app/views/home.html'
+                templateUrl: 'app/views/dashboard.html'
             })
             // ------------USER Login/Signup-------------------------------
             // ADD CONTROLLER
