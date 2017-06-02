@@ -1,5 +1,24 @@
 /*---------Global---------*/
 
+body {
+    font-family: "Georgia", Georgia, serif;
+}
+
+h3 {
+    font-family: "Georgia", Georgia, serif;
+    font-size: 32px;
+}
+
+span {
+    font-family: "Georgia", Georgia, serif;
+    font-size: 16px;
+}
+
+p {
+    font-family: "Georgia", Georgia, serif;
+    font-size: 16px;
+}
+
 
 /*---------Home Page---------*/
 
