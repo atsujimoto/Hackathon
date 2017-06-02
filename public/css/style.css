@@ -32,3 +32,7 @@
 		margin: 2em;
 		padding: 1em;
 }
+
+.project-box div {
+	width: 75%;
+}
