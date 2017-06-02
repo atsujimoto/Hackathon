@@ -85,12 +85,21 @@ footer {
 /*---------Projects---------*/
 
 .flex {
-    display: flex;
+
+		display: flex;
+}
+
+.space-around {
+		justify-content: space-around;
 }
 
 .column {
-    flex-direction: column;
-    align-items: center;
+		flex-direction: column;
+  align-items: center;
+}
+
+.center {
+		align-items: center;
 }
 
 .side-box {
@@ -123,6 +132,7 @@ footer {
 }
 
 .project-box div {
+
     width: 75%;
 }
 
@@ -135,4 +145,9 @@ footer {
     animation: pulse 5s infinite;
     color: #222222;
     background-color: #8F8F8F;
+		width: 75%;
 }
+
+.checkboxes {
+		width: 50%;
+

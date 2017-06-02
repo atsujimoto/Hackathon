@@ -13,10 +13,11 @@ var UserSchema = mongoose.Schema({
         type: String,
         required: true
     },
+    img: String,
     slack: String,
     campus: String,
     class: String,
-    undergrad: Boolean,
+    status: String,
     technologies: [String],
     projects: [{ type: Schema.Types.ObjectId, ref: 'Project'}]
 });
