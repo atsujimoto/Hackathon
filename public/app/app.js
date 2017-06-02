@@ -1,5 +1,5 @@
 // Enter name of App and name of Ctrls!!!!!!
-var app = angular.module('', ['ui.router', '']);
+var app = angular.module('GAPro', ['ui.router', '']);
 
 app.config([
     '$stateProvider',
@@ -27,7 +27,7 @@ app.config([
             // ADD CONTROLLER
             .state('login', {
                 url: '/login',
-                templateUrl: 'app/views/userLogin.html',
+                templateUrl: 'app/views/userLoginSignup.html',
                 controller: ''
             })
             // ------------PROFILE-------------------------------
