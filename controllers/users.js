@@ -2,27 +2,27 @@ var express = require('express');
 var User = require('../models/user');
 var router = express.Router();
 
-router.route('/')
-    //Get all users. Need to add 'where' based on campus/class/tech
-    .post(function(req, res) {
-        User.find(req.body.search, function(err, users) {
+//Add a new user
+router.post('/', function(req, res) {
+    User.findOne({ email: req.body.email }, function(err, user) {
+        if (user) return res.status(400).send({ message: 'Email already exists' });
+
+        User.create(req.body, function(err, user) {
             if (err) return res.status(500).send(err);
 
-            return res.send(users);
-        });
-    })
-    //Add a new user
-    .post(function(req, res) {
-        User.findOne({ email: req.body.email }, function(err, user) {
-            if (user) return res.status(400).send({ message: 'Email already exists' });
-
-            User.create(req.body, function(err, user) {
-                if (err) return res.status(500).send(err);
-
-                return res.send(user);
-            });
+            return res.send(user);
         });
     });
+});
+
+//Get all users. Need to add 'where' based on campus/class/tech
+router.post('/search', function(req, res) {
+    User.find(req.body, function(err, users) {
+        if (err) return res.status(500).send(err);
+
+        return res.send(users);
+    });
+});
 
 router.route('/:id')
     //Get a single user
@@ -35,16 +35,18 @@ router.route('/:id')
     })
     //Edit a user
     .put(function(req, res) {
-        User.findByIdAndUpdate(req.params.id, req.body.update, { new: true}, function(err, result) {
+        User.findByIdAndUpdate(req.params.id, req.body, { new: true}, function(err, result) {
             if (err) return res.status(500).send(err);
 
-            return (result)
+            return res.send(result);
         });
     })
     //Delete a user
     .delete(function(req, res) {
         User.findByIdAndRemove(req.params.id, function(err) {
             if (err) return res.status(500).send(err);
+
+            res.send('User Deleted');
         });
     });
 

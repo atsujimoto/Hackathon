@@ -1,4 +1,5 @@
 var mongoose = require('mongoose');
+Schema = mongoose.Schema;
 
 var ProjectSchema = mongoose.Schema({
     title: String,
