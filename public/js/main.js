@@ -1,1 +1,3 @@
-//Any Materialize JQuery Functionality
+ $(document).ready(function() {
+     $('select').material_select();
+ });

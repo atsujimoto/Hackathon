@@ -18,7 +18,7 @@ app.config([
                 templateUrl: 'app/views/dashboard.html',
                 controller: 'DashCtrl'
             })
-            // ------------USER-------------------------------
+            // ------------USER Login/Signup-------------------------------
             // ADD CONTROLLER
             .state('signup', {
                 url: '/signup',
@@ -28,7 +28,7 @@ app.config([
             // ADD CONTROLLER
             .state('login', {
                 url: '/login',
-                templateUrl: 'app/views/userLoginSignup.html',
+                templateUrl: 'app/views/userLoginRegister.html',
                 controller: ''
             })
             // ------------PROFILE-------------------------------
