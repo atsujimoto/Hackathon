@@ -9,16 +9,19 @@ var app = express();
 
 var mongoose = require('mongoose');
 var User = require('./models/user');
-mongoose.connect('mongodb://localhost/database');
+mongoose.connect('mongodb://localhost/ga-pro');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(require('morgan')('dev'));
 
-app.use('/api/users', expressJWT({ secret: secret }).unless({
-    path: [{ url: '/api/users', methods: ['POST'] }]
-}), require('./controllers/users'));
+// app.use('/api/users', expressJWT({ secret: secret }).unless({
+//     path: [{ url: '/api/users', methods: ['POST'] }]
+// }), require('./controllers/users'));
+
+app.use('/api/users', require('./controllers/users'));
+app.use('/api/projects', require('./controllers/projects'));
 
 app.use(function(err, req, res, next) {
     if (err.name === 'UnauthorizedError') {
