@@ -1,10 +1,17 @@
 .flex {
-	display: flex;
+		display: flex;
+}
+
+.space-around {
+		justify-content: space-around;
 }
 
 .column {
-	flex-direction: column;
-	align-items: center;
+		flex-direction: column;
+}
+
+.center {
+		align-items: center;
 }
 
 .side-box {
@@ -34,5 +41,9 @@
 }
 
 .project-box div {
-	width: 75%;
+		width: 75%;
+}
+
+.checkboxes {
+		width: 50%;
 }

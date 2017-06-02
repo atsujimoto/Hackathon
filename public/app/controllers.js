@@ -51,4 +51,6 @@ angular.module('MainCtrls', ['MainServices'])
         $scope.toggle = function(bool) {
             $scope.bool = bool;
         }
+
+
     }]);
