@@ -67,6 +67,12 @@ footer {
 }
 
 
+/*.categories {
+    background-color: #E4F1FE;
+}
+*/
+
+
 /*---------Login/Register---------*/
 
 
@@ -88,7 +94,7 @@ footer {
 }
 
 .side-box {
-    border: 2px solid black;
+    border: 1px solid black;
     height: 33vw;
     margin: 1em;
     padding: .5em;
@@ -97,7 +103,7 @@ footer {
 
 .candidate-box {
     width: 60%;
-    border: 2px solid black;
+    border: 1px solid black;
     margin: 2em;
     padding: 1em;
     background-color: #E4F1FE;
@@ -110,7 +116,7 @@ footer {
 
 .project-box {
     width: 60%;
-    border: 2px solid black;
+    border: 1px solid black;
     margin: 2em;
     padding: 1em;
     background-color: #E4F1FE;
@@ -118,4 +124,15 @@ footer {
 
 .project-box div {
     width: 75%;
+}
+
+.social-icons {
+    font-size: 2em;
+}
+
+.footer-icons {
+    margin: 0 .3em;
+    animation: pulse 5s infinite;
+    color: #222222;
+    background-color: #8F8F8F;
 }
