@@ -1,27 +1,67 @@
 <!-- User Login -->
 <!-- **UPDATE NG-SUBMIT PATH IF NEED BE -->
-<form ng-submit="userLogin()">
-    <legend>Login</legend>
-    <div>
-        <label for="email">Email</label>
-        <input type="email" id="email" placeholder="test@test.com" ng-model="user.email">
-    </div>
-    <div class="form-group">
-        <label for="password">Password</label>
-        <input type="password" id="password" placeholder="********" ng-model="user.password">
-    </div>
-    <button type="submit">Login</button>
-</form>
+<div class="row">
+    <form class="col s12" ng-submit="userLogin()">
+        <h3>Login</h3>
+        <!-- Email -->
+        <div class="row">
+            <div class="input-field col s12">
+                <input type="email" class="validate" id="email" ng-model="user.email" required>
+                <label for="email" data-error="invalid email address" data-success="OK">Email</label>
+            </div>
+        </div>
+        <!-- Password -->
+        <div class="row">
+            <div class="input-field col s12">
+                <input type="password" class="validate" id="password" ng-model="user.password" required>
+                <label for="password">Password</label>
+            </div>
+        </div>
+        <button class="btn waves-effect waves-light" type="submit" name="action">Login
+            <i class="material-icons right">send</i>
+        </button>
+    </form>
+</div>
+<hr>
 <!-- User Signup -->
-<form ng-submit="userSignup()">
-    <legend>Signup</legend>
-    <div>
+<form ng-submit="" class="">
+    <h3>Signup</h3>
+    <!-- Name -->
+    <div class="input-field col s12">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" placeholder="{{ user.name }}" ng-model="user.name">
+    </div>
+    <!-- Email -->
+    <div class="input-field col s12">
         <label for="email">Email</label>
-        <input type="email" id="email" placeholder="test@test.com" ng-model="user.email">
+        <input type="text" class="form-control" placeholder="{{ user.email }}" ng-model="user.email">
     </div>
-    <div>
-        <label for="password">Password</label>
-        <input type="password" id="password" placeholder="********" ng-model="user.password">
+    <!--Slack Account-->
+    <div class="input-field col s12">
+        <label for="slack">Slack</label>
+        <input type="text" class="form-control" placeholder="{{ user.slack }}" ng-model="user.slack">
     </div>
-    <button type="submit">Signup</button>
+    <!--Campus-->
+    <div class="input-field col s12">
+        <label for="campus">Campus Location</label>
+        <input type="text" class="form-control" placeholder="{{ user.campus }}" ng-model="user.campus">
+    </div>
+    <!-- Class-->
+    <div class="input-field col s12">
+        <label for="class">Class</label>
+        <input type="text" class="form-control" placeholder="{{ user.class }}" ng-model="user.class">
+    </div>
+    <!--Undergrad -->
+    <div class="input-field col s12">
+        <label for="undergrad">Undergraduate</label>
+        <input type="text" class="form-control" placeholder="{{ user.undergrad }}" ng-model="user.undergrad">
+    </div>
+    <!-- Technologies -->
+    <div class="input-field col s12">
+        <label for="class">Preferred Technologies</label>
+        <input type="text" class="form-control" placeholder="{{ user.technologies }}" ng-model="user.technologies">
+    </div>
+    <div class="">
+        <button type="submit" class="save-btns">Submit</button>
+    </div>
 </form>
