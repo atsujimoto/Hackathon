@@ -19,15 +19,15 @@ app.config([
             })
             // ------------USER Login/Signup-------------------------------
             // ADD CONTROLLER
-            // .state('signup', {
-            //     url: '/signup',
-            //     templateUrl: 'app/views/userSignup.html',
-            //     controller: ''
-            // })
+            .state('signup', {
+                url: '/signup',
+                templateUrl: 'app/views/userSignup.html',
+                controller: ''
+            })
             // ADD CONTROLLER
             .state('login', {
                 url: '/login',
-                templateUrl: 'app/views/userLoginSignup.html',
+                templateUrl: 'app/views/userLoginRegister.html',
                 controller: ''
             })
             // ------------PROFILE-------------------------------
