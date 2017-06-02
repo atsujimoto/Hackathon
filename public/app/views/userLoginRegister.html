@@ -20,32 +20,35 @@
                     </div>
                 </div>
                 <div>
-                    <button class="btn waves-effect waves-light" type="submit" name="action">Login</button>
+                    <a href="/dashboard" class="btn red lighten-1" type="submit" name="action">Login</a>
                 </div>
             </form>
         </div>
         <!-- GA Authentication -->
         <div class="col s6 l6">
-            <h3>Are you a GA Student?</h3>
-            <form action="#">
-                <p>
-                    <input name="group1" type="radio" id="Yes" />
-                    <label for="Yes">Yes</label>
-                </p>
-                <p>
-                    <input name="group1" type="radio" id="No" />
-                    <label for="No">No</label>
-                </p>
-                <h5>Enter your Authentication Code</h5>
-                <span>This was received in your email</span>
-                <div class="input-field col s6">
-                    <label for="name">Authentication Code</label>
-                    <input type="text" class="validate" placeholder="Name" ng-model="user.name">
+            <div class="card">
+                <div class="card-content">
+                    <h3>Are you a GA Student?</h3>
+                    <form action="#">
+                        <p>
+                            <input name="group1" type="radio" id="Yes" />
+                            <label for="Yes">Yes</label>
+                        </p>
+                        <p>
+                            <input name="group1" type="radio" id="No" />
+                            <label for="No">No</label>
+                        </p>
+                        <h5>Enter your Authentication Code</h5>
+                        <span>This was received in your email</span>
+                        <div class="input-field col s6">
+                            <label for="name">Authentication Code</label>
+                            <input type="text" class="validate" ng-model="user.name">
+                        </div>
+                        <div>
+                            <a href="/signup" class="btn btn-theme red lighten-1" type="submit">Create Account</a>
+                        </div>
+                    </form>
                 </div>
-                <div>
-                    <a href="/signup" class="btn waves-effect waves-light" type="submit">Submit</a>
-                </div>
-            </form>
+            </div>
         </div>
     </div>
-</div>

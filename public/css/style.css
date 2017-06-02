@@ -1,8 +1,8 @@
-
 /*---------Global---------*/
 
 body {
     font-family: "Georgia", Georgia, serif;
+    background-color: #F6F6F6;
 }
 
 h3 {
@@ -23,6 +23,55 @@ p {
 
 /*---------Home Page---------*/
 
+nav {
+    background-color: #222222;
+}
+
+button.btn {
+    background-color: #ff5f5f;
+    border-bottom: #A20101;
+    margin: .5em;
+    font-size: 18px;
+}
+
+button.btn:hover {
+    background-color: #FA4542;
+}
+
+button.btn:active {
+    background-color: white;
+}
+
+.main-pg-pic {
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+}
+
+.mid-section-home {
+    text-align: center;
+    margin: 10em 2em;
+}
+
+.bottom-section-home {
+    text-align: center;
+    margin: 10em 0;
+}
+
+footer {
+    background-color: #222222;
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    padding: 5em 2em;
+}
+
+
+/*.categories {
+    background-color: #E4F1FE;
+}
+*/
+
 
 /*---------Login/Register---------*/
 
@@ -36,6 +85,7 @@ p {
 /*---------Projects---------*/
 
 .flex {
+
 		display: flex;
 }
 
@@ -45,6 +95,7 @@ p {
 
 .column {
 		flex-direction: column;
+  align-items: center;
 }
 
 .center {
@@ -52,35 +103,51 @@ p {
 }
 
 .side-box {
-		border: 2px solid black;
-		height: 33vw;
-		margin: 1em;
-		padding: .5em;
+    border: 1px solid black;
+    height: 33vw;
+    margin: 1em;
+    padding: .5em;
+    background-color: white;
 }
 
 .candidate-box {
-		width: 60%;
-		border: 2px solid black;
-		margin: 2em;
-		padding: 1em;
+    width: 60%;
+    border: 1px solid black;
+    margin: 2em;
+    padding: 1em;
+    background-color: #E4F1FE;
 }
 
 .candidate-box img {
-		max-width: 200px;
-		max-height: 200px;
+    max-width: 200px;
+    max-height: 200px;
 }
 
 .project-box {
-		width: 60%;
-		border: 2px solid black;
-		margin: 2em;
-		padding: 1em;
+    width: 60%;
+    border: 1px solid black;
+    margin: 2em;
+    padding: 1em;
+    background-color: #E4F1FE;
 }
 
 .project-box div {
+
+    width: 75%;
+}
+
+.social-icons {
+    font-size: 2em;
+}
+
+.footer-icons {
+    margin: 0 .3em;
+    animation: pulse 5s infinite;
+    color: #222222;
+    background-color: #8F8F8F;
 		width: 75%;
 }
 
 .checkboxes {
 		width: 50%;
-}
+
